@@ -1,0 +1,29 @@
+Install:
+
+1. export variables
+	export LIBS=-lrt
+	export CFLAGS="-D SLURM_SIMULATOR"
+
+
+2. run the installer
+	root@tpc03:~/cscs14038bscVIII# ./install.pl
+
+
+3. check errors:
+	cd slurm
+	less make.log 
+
+
+4. check that all the executables have been built:
+	ls -l ../slurm_programs/bin/
+	ls -l ../slurm_programs/sbin/
+
+
+5. build simulation stuff in the contribs directory
+	root@tpc03:~/cscs14038bscVIII/slurm/contribs# make clean
+	root@tpc03:~/cscs14038bscVIII/slurm/contribs# make
+	root@tpc03:~/cscs14038bscVIII/slurm/contribs# make install
+
+
+
+
